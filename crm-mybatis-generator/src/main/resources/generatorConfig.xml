@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+
+<generatorConfiguration>
+
+    <context id="mysqlTables" targetRuntime="MyBatis3">
+        <plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"/>
+
+        <jdbcConnection driverClass="${jdbcDriver}"
+                        connectionURL="${jdbcURL}"
+                        userId="${jdbcUserId}" password="${jdbcPassword}"/>
+
+        <!-- 指定生成的类型为java类型，避免数据库中number等类型字段 -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成model模型，对应的包，存放位置可以指定具体的路径,如/ProjectName/src，也可以使用MAVEN来自动生成 -->
+        <javaModelGenerator targetPackage="cscw.crm.core.entity" targetProject="MAVEN">
+            <property name="enableSubPackages" value="true"/>
+        </javaModelGenerator>
+
+        <table tableName="accountmonth" domainObjectName="Accountmonth"></table>
+        <table tableName="action" domainObjectName="Action"></table>
+        <table tableName="actionaddr" domainObjectName="Actionaddr"></table>
+        <table tableName="actionman" domainObjectName="Actionman"></table>
+        <table tableName="addin" domainObjectName="Addin"></table>
+        <table tableName="area" domainObjectName="Area"></table>
+        <table tableName="attend" domainObjectName="Attend"></table>
+        <table tableName="attendcheck" domainObjectName="Attendcheck"></table>
+        <table tableName="attendcust" domainObjectName="Attendcust"></table>
+        <table tableName="auditflow" domainObjectName="Auditflow"></table>
+        <table tableName="auditrecs" domainObjectName="Auditrecs"></table>
+        <table tableName="autotype" domainObjectName="Autotype"></table>
+        <table tableName="batch" domainObjectName="Batch"></table>
+        <table tableName="batchpay" domainObjectName="Batchpay"></table>
+        <table tableName="billrecs" domainObjectName="Billrecs"></table>
+        <table tableName="car" domainObjectName="Car"></table>
+        <table tableName="chargearea" domainObjectName="Chargearea"></table>
+        <table tableName="corp" domainObjectName="Corp"></table>
+        <table tableName="corpfee" domainObjectName="Corpfee"></table>
+        <table tableName="customer" domainObjectName="Customer"></table>
+        <table tableName="custrelations" domainObjectName="Custrelations"></table>
+        <table tableName="custsick" domainObjectName="Custsick"></table>
+        <table tableName="custupdate" domainObjectName="Custupdate"></table>
+        <table tableName="deliver" domainObjectName="Deliver"></table>
+        <table tableName="deliverinout" domainObjectName="Deliverinout"></table>
+        <table tableName="depot" domainObjectName="Depot"></table>
+        <table tableName="depotcheck" domainObjectName="Depotcheck"></table>
+        <table tableName="depotgoodscheck" domainObjectName="Depotgoodscheck"></table>
+        <table tableName="depotinout" domainObjectName="Depotinout"></table>
+        <table tableName="dept" domainObjectName="Dept"></table>
+        <table tableName="deptattend" domainObjectName="Deptattend"></table>
+        <table tableName="deptfee" domainObjectName="Deptfee"></table>
+        <table tableName="goods" domainObjectName="Goods"></table>
+        <table tableName="goodscheck" domainObjectName="Goodscheck"></table>
+        <table tableName="gotscore" domainObjectName="Gotscore"></table>
+        <table tableName="identity" domainObjectName="Identity"></table>
+        <table tableName="jbpm4_deployment" domainObjectName="Jbpm4Deployment"></table>
+        <table tableName="jbpm4_deployprop" domainObjectName="Jbpm4Deployprop"></table>
+        <table tableName="jbpm4_execution" domainObjectName="Jbpm4Execution"></table>
+        <table tableName="jbpm4_hist_actinst" domainObjectName="Jbpm4HistActinst"></table>
+        <table tableName="jbpm4_hist_detail" domainObjectName="Jbpm4HistDetail"></table>
+        <table tableName="jbpm4_hist_procinst" domainObjectName="Jbpm4HistProcinst"></table>
+        <table tableName="jbpm4_hist_task" domainObjectName="Jbpm4HistTask"></table>
+        <table tableName="jbpm4_hist_var" domainObjectName="Jbpm4HistVar"></table>
+        <table tableName="jbpm4_id_group" domainObjectName="Jbpm4IdGroup"></table>
+        <table tableName="jbpm4_id_membership" domainObjectName="Jbpm4IdMembership"></table>
+        <table tableName="jbpm4_id_user" domainObjectName="Jbpm4IdUser"></table>
+        <table tableName="jbpm4_job" domainObjectName="Jbpm4Job"></table>
+        <table tableName="jbpm4_lob" domainObjectName="Jbpm4Lob"></table>
+        <table tableName="jbpm4_participation" domainObjectName="Jbpm4Participation"></table>
+        <table tableName="jbpm4_property" domainObjectName="Jbpm4Property"></table>
+        <table tableName="jbpm4_swimlane" domainObjectName="Jbpm4Swimlane"></table>
+        <table tableName="jbpm4_task" domainObjectName="Jbpm4Task"></table>
+        <table tableName="jbpm4_variable" domainObjectName="Jbpm4Variable"></table>
+        <table tableName="jobexp" domainObjectName="Jobexp"></table>
+        <table tableName="jobtrans" domainObjectName="Jobtrans"></table>
+        <table tableName="learnexp" domainObjectName="Learnexp"></table>
+        <table tableName="loan" domainObjectName="Loan"></table>
+        <table tableName="logonlog" domainObjectName="Logonlog"></table>
+        <table tableName="macrecs" domainObjectName="Macrecs"></table>
+        <table tableName="mailmessage" domainObjectName="Mailmessage"></table>
+        <table tableName="menu" domainObjectName="Menu"></table>
+        <table tableName="motorcade" domainObjectName="Motorcade"></table>
+        <table tableName="newtable" domainObjectName="Newtable"></table>
+        <table tableName="offer" domainObjectName="Offer"></table>
+        <table tableName="officephone" domainObjectName="Officephone"></table>
+        <table tableName="orderauditrecs" domainObjectName="Orderauditrecs"></table>
+        <table tableName="orderform" domainObjectName="Orderform"></table>
+        <table tableName="orderpayment" domainObjectName="Orderpayment"></table>
+        <table tableName="orderprize" domainObjectName="Orderprize"></table>
+        <table tableName="orderprizedist" domainObjectName="Orderprizedist"></table>
+        <table tableName="orderproduct" domainObjectName="Orderproduct"></table>
+        <table tableName="partbatch" domainObjectName="Partbatch"></table>
+        <table tableName="partbatchpay" domainObjectName="Partbatchpay"></table>
+        <table tableName="partdepot" domainObjectName="Partdepot"></table>
+        <table tableName="partinout" domainObjectName="Partinout"></table>
+        <table tableName="phone" domainObjectName="Phone"></table>
+        <table tableName="phonefees" domainObjectName="Phonefees"></table>
+        <table tableName="premise" domainObjectName="Premise"></table>
+        <table tableName="premisemonthfee" domainObjectName="Premisemonthfee"></table>
+        <table tableName="product" domainObjectName="Product"></table>
+        <table tableName="productdepot" domainObjectName="Productdepot"></table>
+        <table tableName="productpart" domainObjectName="Productpart"></table>
+        <table tableName="productpartset" domainObjectName="Productpartset"></table>
+        <table tableName="productprob" domainObjectName="Productprob"></table>
+        <table tableName="producttype" domainObjectName="Producttype"></table>
+        <table tableName="relation" domainObjectName="Relation"></table>
+        <table tableName="requircar" domainObjectName="Requircar"></table>
+        <table tableName="role" domainObjectName="Role"></table>
+        <table tableName="rolemenu" domainObjectName="Rolemenu"></table>
+        <table tableName="sentemails" domainObjectName="sentemails"></table>
+        <table tableName="service" domainObjectName="Service"></table>
+        <table tableName="sick" domainObjectName="Sick"></table>
+        <table tableName="spentscore" domainObjectName="Spentscore"></table>
+        <table tableName="staff" domainObjectName="Staff"></table>
+        <table tableName="stafffee" domainObjectName="Stafffee"></table>
+        <table tableName="staffrole" domainObjectName="Staffrole"></table>
+        <table tableName="subject" domainObjectName="Subject"></table>
+        <table tableName="support" domainObjectName="Support"></table>
+        <table tableName="syscode" domainObjectName="Syscode"></table>
+        <table tableName="syspara" domainObjectName="Syspara"></table>
+        <table tableName="user" domainObjectName="User"></table>
+        <table tableName="vipcard" domainObjectName="Vipcard"></table>
+        <table tableName="vipcardloads" domainObjectName="Vipcardloads"></table>
+        <table tableName="visit" domainObjectName="Visit"></table>
+        <table tableName="visitcallrecs" domainObjectName="Visitcallrecs"></table>
+        <table tableName="workbill" domainObjectName="Workbill"></table>
+        <table tableName="workflow" domainObjectName="Workflow"></table>
+        <table tableName="worknode" domainObjectName="Worknode"></table>
+        <table tableName="workresult" domainObjectName="Workresult"></table>
+    </context>
+</generatorConfiguration>
