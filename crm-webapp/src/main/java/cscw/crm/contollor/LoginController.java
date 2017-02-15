@@ -3,8 +3,6 @@ package cscw.crm.contollor;
 
 import cscw.crm.core.common.ErrorCode;
 import cscw.crm.security.utils.SecurityContextUtil;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.DisabledException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +34,7 @@ public class LoginController {
 //            modelMap.put("error", ErrorCode.USER_DISABLE.getErrmsg());
 //        }
         return "/login";
+
     }
 
     @RequestMapping(method = RequestMethod.GET , value = "/failure")
